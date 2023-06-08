@@ -19,15 +19,32 @@
       overflow-y: auto;
       opacity: 0;
       transition: opacity 0.3s ease;
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
     }
 
     .privacy-policy.fade-in {
       opacity: 1;
     }
 
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    .privacy-policy::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .privacy-policy::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    /* Hide scrollbar for Firefox */
+    .privacy-policy {
+      scrollbar-width: none;
+    }
+    
     h1 {
       font-size: 24px;
       color: #333;
+      text-align: center;
     }
 
     p {
@@ -60,7 +77,7 @@
         <li>Location information: GPS data to provide accurate delivery services.</li>
         <li>Device information: Device type, operating system, and unique device identifier.</li>
         <li>Usage data: Information about how you interact with the Zovack application.</li>
-      </ul>
+     </ul>
     </div>
 
 <div class="section">
