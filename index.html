@@ -17,6 +17,12 @@
       max-width: 800px;
       height: 100%;
       overflow-y: auto;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .privacy-policy.fade-in {
+      opacity: 1;
     }
 
     h1 {
@@ -57,7 +63,7 @@
       </ul>
     </div>
 
-    <div class="section">
+<div class="section">
       <h2 class="section-title">Sharing of Information</h2>
       <p>We may share your information with the following parties:</p>
       <ul>
@@ -95,8 +101,15 @@
       <p>Email: support@zovack.com</p>
       <p>Phone: 123-456-7890</p>
     </div>
-
   </div>
+
+  <script>
+    // Add fade-in animation when the page loads
+    window.addEventListener('load', function() {
+      const privacyPolicy = document.querySelector('.privacy-policy');
+      privacyPolicy.classList.add('fade-in');
+    });
+  </script>
 </body>
 
 </html>
